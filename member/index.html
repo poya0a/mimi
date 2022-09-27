@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미미 | 회원 가입</title>
+  <link rel="shortcut icon" type="image/ico" href="./images/icon.ico">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/response.css">
+  <script src="../script/lib/jquery-1.12.4.min.js"></script>
+  <script src="../script/lib/jquery.easing.1.3.js"></script>
+  <script src="../script/lib/axios.min.js"></script>
+  <script src="../script/lib/postcode.v2.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <ul id="skip">
+    <li><a href="#nav" title="메뉴 바로가기">메뉴 바로가기</a></li>
+    <li><a href="#main" title="메인 바로가기">메인 바로가기</a></li>
+  </ul>
+
+  <div id="wrap">
+
+    <header id="header">
+      <div class="container">
+        <div class="gap">
+          <div class="wrap">
+
+            <div class="menu-btn-box">
+              <a href="#none" class="menu-btn">
+                <span>
+                  <i class="line line1"></i>
+                  <i class="line line2"></i>
+                  <i class="line line3"></i>
+                </span>
+              </a>
+            </div>
+
+            <div class="main-menu-wrap">
+              <nav id="nav">
+  
+                <ul class="main-menu-list">
+  
+                  <li class="main-menu even-num">
+                    <a href="#none" class="main-btn" title="소개">소개</a>
+                    <div class="sub sub1 sub-even">
+                      <div class="sub-gap">
+                        <ul>
+                          <li><a href="#none" title="소개">소개</a></li>
+                          <li><a href="#none" title="공지사항">공지사항</a></li>
+                          <li><a href="#none" title="소식">소식</a></li>
+                          <li><a href="#none" title="오시는 길">오시는 길</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu odd-num">
+                    <a href="#none" class="main-btn" title="작품">작품</a>
+                    <div class="sub sub2 sub-odd">
+                      <div class="sub-gap">
+                        <ul>
+                          <li>
+                            <a href="#none" class="sub-btn" title="주제">주제</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="전체"><span>전체</span></a></li>
+                                  <li><a href="#none" title="인물"><span>인물</span></a></li>
+                                  <li><a href="#none" title="풍경"><span>풍경</span></a></li>
+                                  <li><a href="#none" title="정물"><span>정물</span></a></li>
+                                  <li><a href="#none" title="동물"><span>동물</span></a></li>
+                                  <li><a href="#none" title="추상"><span>추상</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="크기">크기</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" class="sub-sub-btn" title="24 X 19CM"><span>24 X 19CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~33.4 X 24.3CM"><span>~33.4 X 24.3CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~40.9 X 31.8CM"><span>~40.9 X 31.8CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~53 X 45.5CM"><span>~53 X 45.5CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~72.7 X 60.6CM"><span>~72.7 X 60.6CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~80 X 65.2CM"><span>~80 X 65.2CM</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu even-num">
+                    <a href="#none" class="main-btn" title="작가">작가</a>
+                    <div class="sub sub3 sub-even">
+                      <div class="sub-gap">
+                        <ul>
+                          <li><a href="#none" title="작가 소개">작가 소개</a></li>
+                          <li><a href="#none" title="작가 작품">작가 작품</a></li>
+                          <li><a href="#none" title="작가 전시">작가 전시</a></li>
+                          <li><a href="#none" title="작가 소식">작가 소식</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu odd-num">
+                    <a href="#none" class="main-btn" title="전시">전시</a>
+                    <div class="sub sub4 sub-odd">
+                      <div class="sub-gap">
+                        <ul>
+                          <li>
+                            <a href="#none" class="sub-btn" title="서울">서울</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="창원">창원</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="제주한림">제주한림</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="여의도">여의도</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="온라인">온라인</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu even-num">
+                    <a href="#none" class="main-btn" title="구매">구매</a>
+                    <div class="sub sub5 sub-even">
+                      <div class="sub-gap">
+                        <ul>
+                          <li><a href="#none" title="추천 작품">추천 작품</a></li>
+                          <li><a href="#none" title="기획 상품">기획 상품</a></li>
+                          <li><a href="#none" title="한정 상품">한정 상품</a></li>
+                          <li><a href="#none" title="기념 선물">기념 선물</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                </ul>
+
+              </nav>
+            </div>
+
+            <div class="logo-box"><a href="../index.html" title="미미"><img class="logo-top" src="./images/logo09.png" alt="logo"></a></div>
+
+            <aside id="aside">
+              <div class="user-box"><a href="#none" class="user-btn" title="개인 회원"><i class="fa fa-user"></i></a></div>
+              <ul class="user-menu-list">
+                <li><a href="../login/index.html" title="로그인">로그인</a><i class="bar-icon"></i></li>
+                <li><a href="./index.html" title="회원가입">회원가입</a><i class="bar-icon"></i></li>
+                <li><a href="#none" title="작가 등록">작가 등록</a><i class="bar-icon"></i></li>
+                <li><a href="#none" class="globe-icon"><i class="fa fa-globe"></i></a></li>
+              </ul>
+            </aside>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <div class="gap">
+          <div class="wrap">
+
+            <div class="title-wrap">
+              <span>미미<i></i></span><strong>회원 가입</strong>
+              <h2>회원 가입</h2>
+            </div>
+
+            <div class="content-wrap">
+
+              <div class="cube-wrap">
+
+                <div class="move-box">
+                  <div class="cube-box">
+                    <div class="cube front"><img src="./images/cube.jpg" alt="cube"></div>
+                    <div class="cube back"><img src="./images/cube.jpg" alt="cube"></div>
+                    <div class="cube left"><img src="./images/cube.jpg" alt="cube"></div>
+                    <div class="cube right"><img src="./images/cube.jpg" alt="cube"></div>
+                    <div class="cube top"><img src="./images/cube.jpg" alt="cube"></div>
+                    <div class="cube bottom"><img src="./images/cube.jpg" alt="cube"></div>
+                  </div>
+                </div>
+              
+                <h3>회원 정보 작성</h3>
+
+              </div>
+
+              <div class="content-box">
+
+                <div class="form-wrap">
+                  <form autocomplete="off" action="./response.php" method="post" name="member" id="member">
+                    <ul id="memberForm">
+
+                      <li class="page-sub">
+                        <h4>기본 정보 입력</h4><span><i>*</i>필수 입력 사항</span>
+                      </li>
+
+                      <li>
+                        <div class="sub-title"><label for="inputName"><span>이름</span><i>*</i></label></div>
+                        <div class="input-box">
+                          <input type="text" id="inputName" name="inputName" placeholder="이름을 입력해 주세요" maxlength="30">
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="sub-title"><label for="inputId"><span>아이디</span><i>*</i></label></div>
+                        <div class="input-box">
+                          <input type="text" id="inputId" name="inputId" placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합" maxlength="20">
+                          <button class="id-confirm-btn">중복확인</button>
+                          <div class="guide-text guide-id">
+                            <p>6자 이상의 영문 혹은 영문과 숫자를 조합</p>
+                            <p>아이디 중복확인</p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="sub-title"><label for="inputPw"><span>비밀번호</span><i>*</i></label></div>
+                        <div class="input-box">
+                          <input type="password" id="inputPw" name="inputPw" placeholder="비밀번호를 입력해 주세요" maxlength="20">
+                          <div class="guide-text guide-pw">
+                            <p>8자 이상 입력</p>
+                            <p>영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</p>
+                            <p>동일한 숫자 3개 이상 연속 사용 불가</p>
+                          </div>
+                        </div>
+                      </li>
+      
+                      <li>
+                        <div class="sub-title sub-title-4th"><label for="inputPwConfirm"><span>비밀번호<br class="enter"> 확인</span><i>*</i></label></div>
+                        <div class="input-box">
+                          <input type="password" id="inputPwConfirm" name="inputPwConfirm" placeholder="비밀번호를 한번 더 입력해 주세요" maxlength="20">
+                          <div class="guide-text guide-password-confirm">
+                            <p>동일한 비밀번호를 입력해주세요.</p>
+                          </div>                    
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="sub-title sub-title-5th"><label><span>문자/이메일<br>수신동의</span><i>*</i></label></div>
+                        <div class="input-box receive">
+                          <label for="yes"><input type="radio" id="yes" name="receive" value="예"><span>예</span></label>                    
+                          <label for="no"><input type="radio" id="no" name="receive" value="아니오"><span>아니오</span></label>                         
+                        </div>
+                      </li>
+
+                      <li class="page-sub"><h4>추가 정보 입력</h4></li>
+
+                      <li class="address">
+                        <div class="sub-title"><label><span>주소</span></label></div>
+                        <div class="input-box">
+                          <input type="text" id="inputAddress1" class="input-address" name="input-address" placeholder="우편 번호" readonly/>
+                          <input type="text" id="inputAddress2" class="input-address" name="input-address" placeholder="주소" readonly/>
+                          <input type="text" id="inputAddress3" class="input-address" name="input-address" placeholder="세부 주소를 입력하세요">
+                          <button class="address-btn" title="주소검색"><span>주소검색</span></button>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="sub-title"><label for="inputPhone"><span>휴대폰</span></label></div>
+                        <div class="input-box">
+                          <input type="text" id="inputPhone" name="inputPhone" placeholder="숫자만 입력해주세요" maxlength="11">
+                          <button class="phone-btn">인증번호 받기</button>
+                          <div class="code-num">
+                            <div class="code-box off">
+                              <input type="text" id="inputCode" class="input-code" name="input-code" placeholder="인증번호 입력" maxlength="8">
+                              <p id="countdown" class="countdown"></p>
+                            </div>
+                            <button class="code-confirm-btn">인증번호 확인</button>
+                            <p class="receive-info">인증번호가 오지 않는다면, 통신사 스팸 차단 서비스 혹은 휴대폰 번호 차단 여부를 확인해주세요.</p>
+                          </div>
+                          <div class="guide-text guide-receive">
+                            <p></p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="sub-title"><label for="inputEmail"><span>이메일</span></label></div>
+                        <div class="input-box">
+                          <input type="email" id="inputEmail" class="input-email" name="inputEmail" placeholder="예: abc123@mimi.com" maxlength="50">
+                          <button class="email-confirm-btn">중복확인</button>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="sub-title"><label><span>생년월일</span></label></div>
+                        <div class="input-box">
+                          <div class="date-box">
+                            <ul>
+                              <li><input type="text" id="year" class="birthday" name="year" placeholder="YYYY" maxlength="4"></li>
+                              <li><span>/</span></li>
+                              <li><input type="text" id="month" class="birthday" name="month"  placeholder="MM" maxlength='2'></li>
+                              <li><span>/</span></li>
+                              <li><input type="text" id="date" class="birthday" name="date"  placeholder="DD" maxlength='2'></li>
+                            </ul>
+                          </div>
+      
+                          <div class="guide-txt guide-birthday">
+                            <p></p>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </form>
+                </div>
+
+                <div class="border-wrap">
+                  <ul id="borderBox">
+
+                    <li class="border">
+                      <div class="border-title"><h4>서비스 이용약관(필수)</h4></div>
+
+                      <div class="scroll-box">
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제1조(목적)</strong>
+                          <p class="txt">
+                            이 약관은 미미(이하 "회사"라 칭함)가 제공하는 인터넷 사이트(이하 “사이트”라 한다) 관련 서비스(이하 "서비스"라 한다)의 이용에 있어 사이트와 이용자의 권리·의무 및 책임사항을 규정하여 고객 권익을 보호함을 목적으로 합니다.<br>
+                            ※「PC통신, 스마트폰 앱, 제휴 은행사이트 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제2조(정의)</strong>
+                          <p class="txt">
+                            1. "사이트"란 회사가 재화 또는 용역을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 또는 용역을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이트를 운영하는 회사의 의미로도 사용합니다. 사이트 주소 : www.elandgallery.com<br>
+                            2. "이용자"란 "사이트"에 접속하여 이 약관에 따라 "사이트"가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.<br>
+                            3. “회원'”이라 함은 "사이트"에 개인정보를 제공하여 회원등록을 한 자로서, "사이트"의 정보를 지속적으로 제공받으며, "사이트"가 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.<br>
+                            4. “비회원”'이라 함은 회원에 가입하지 않고 "사이트"가 제공하는 서비스를 이용하는 자를 말합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제3조 (약관의 명시와 개정)</strong>
+                          <p class="txt">
+                            1. "회사"는 이 약관의 내용과 상호, 영업소 소재지, 대표자의 성명, 사업자등록번호, 통신판매업신고번호, 연락처(전화, 팩스, 전자우편 주소 등) 등을 이용자가 쉽게 알 수 있도록 “사이트”의 서비스 초기 화면에 게시합니다. 다만, 약관의 내용은 연결화면을 통하여 볼 수 있도록 할 수 있습니다.<br>
+                            2. “사이트”는 이용자가 약관의 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약철회, 배송책임, 환불조건 등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을 제공하여 이용자의 확인을 구해야 합니다.<br>
+                            3. "사이트"는 약관의 규제 등에 관한 법률, 전자문서 및 전자거래기본법, 전자서명법, 정보통신망이용촉진 등에 관한 법률, 전자상거래에서의 소비자보호에 관한 법률, 방문판매 등에 관한 법률, 소비자기본법, 위치정보의 보호 및 이용등에 관한 법률 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.<br>
+                            4. "사이트"가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 사이트의 초기화면에 개정사실을 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다. 다만, 이용자에게 불리하게 약관내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 공지합니다. 이 경우 "몰“은 개정 전 내용과 개정 후 내용을 명확하게 비교하여 이용자가 알기 쉽도록 표시합니다. 전부터 공지하되, 동 기간 동안 개정된 약관의 내용을 현행약관이 게시되는 서비스 화면에 함께 게시합니다.<br>
+                            5. "사이트"가 약관을 개정할 경우에는 개정되는 약관은 그 약관이 적용되는 날 이후에 체결되는 계약에만 적용되고 이전에 이미 체결된 계약에 대해서는 개정 이전의 약관조항이 그대로 적용됩니다. 다만 이미 계약을 체결한 이용자가 개정약관 조항의 적용을 받기를 원하는 뜻을 상기 제3항에서 정한 개정약관의 공지기간 내에 '사이트"에 송신하여 "사이트"의 동의를 받은 경우에는 개정약관 조항이 적용됩니다.<br>
+                            6. 이 약관에서 정하지 않은 사항과 이 약관의 해석에 관하여는 전자상거래 등에서의 소비자보호에 관한 법률, 약관의 규제 등에 관한 법률, 공정거래위원회가 정하는 전자상거래 등에서의 소비자 보호지침, 정부가 제정한 전자거래소비자보호지침 및 관계법령 또는 상관례에 따릅니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제4조(서비스의 제공 및 변경)</strong>
+                          <p class="txt">
+                            1. " 사이트"는 다음과 같은 업무를 수행합니다<br>
+                            &nbsp;&nbsp;&nbsp;① 재화 또는 용역에 대한 정보 제공 및 구매계약의 체결<br>
+                            &nbsp;&nbsp;&nbsp;② 구매계약이 체결된 재화 또는 용역의 배송<br>
+                            &nbsp;&nbsp;&nbsp;③ “뉴스레터”(작품, 작가, 전시회 소개 등)” 신청자에 대한 이메일 안내 서비스<br>
+                            &nbsp;&nbsp;&nbsp;④ 기타 "사이트"가 정하는 업무<br>
+                            2. "사이트"는 재화의 품절 또는 기술적 사양의 변경 등의 경우에는 장차 체결되는 계약에 의해 제공할 재화·용역의 내용을 변경할 수 있습니다. 이 경우에는 변경된 재화·용역의 내용 및 제공일자를 명시하여 현재의 재화·용역의 내용을 게시한 곳에 그 제공일자 즉시 공지합니다.<br>
+                            3. "사이트"가 제공하기로 이용자와 계약을 체결한 서비스의 내용을 재화 등의 품절 또는 기술적 사양의 변경 등의 사유로 변경할 경우에는 그 사유를 이용자에게 통지 가능한 방법으로 즉시 통지하고, "사이트"은 이로 인하여 이용자가 입은 손해를 배상합니다. 단, "사이트"에 고의 또는 과실이 없음을 입증하는 경우에는 그러하지 아니합니다.<br>
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제5조(서비스의 중단)</strong>
+                          <p class="txt">
+                            1. "사이트"는 컴퓨터 등 정보통신설비의 보수점검·교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.<br>
+                            2. 상기 제1항에 의한 서비스 중단의 경우에는 "사이트"는 제8조에 정한 방법으로 이용자에게 통지합니다.<br>
+                            3. 사업종목의 전환, 사업의 포기, 업체 간의 통합 등의 이유로 서비스를 제공할 수 없게 되는 경우에는 “사이트”는 제8조에 정한 방법으로 이용자에게 통지하고 당초 “몰”에서 제시한 조건에 따라 소비자에게 보상합니다. 다만, “몰”이 보상기준 등을 고지하지 아니한 경우에는 이용자들의 마일리지 또는 적립금 등을 “몰”에서 통용되는 통화가치에 상응하는 현물 또는 현금으로 이용자에게 지급합니다. "사이트"가 제공하기로 이용자와 계약을 체결한 서비스의 내용을 재화의 품절 또는 기술적 사양의 변경 등의 사유로 변경할 경우에 "사이트"는 이로 인하여 이용자가 입은 손해를 배상합니다. 단 "사이트"의 고의 또는 과실이 없는 경우는 그러하지 아니합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제6조(회원가입)</strong>
+                          <p class="txt">
+                            1. 이용자는 "사이트"가 정한 가입 양식에 따라 회원정보를 기입한 후 이 약관에 동의한다는 의사 표시를 함으로서 회원가입을 신청합니다.<br>
+                            2. "사이트"는 제1항과 같이 회원으로 가입할 것을 신청한 이용자 중 다음 각 호에 해당하지 않는 한 회원으로 등록합니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 가입신청자가 이 약관 제7조 제3항에 의하여 이전에 회원자격을 상실한 적이 있는 경우, 다만 제7조 제3항에 의한 회원자격 상실 후 3년이 경과한 자로서 "사이트"의 회원재가입 승낙을 얻은 경우에는 예외로 합니다.<br>
+                            &nbsp;&nbsp;&nbsp;② 등록 내용에 허위, 기재누락, 오기가 있는 경우<br>
+                            &nbsp;&nbsp;&nbsp;③ 기타 회원으로 등록하는 것이 "사이트"의 기술상 현저히 지장이 있다고 판단되는 경우<br>
+                            3. 회원가입계약의 성립시기는 "사이트"의 승낙이 회원에게 도달한 시점으로 합니다.<br>
+                            4. 회원은 제15조제1항에 의한 등록사항에 변경이 있는 경우, 즉시 상당한 기간 내에 전자우편, 회원정보 수정, 기타 방법으로 "사이트"에 대하여 그 변경사항을 알려야 합니다. 이러한 변경사항의 미통보로 인해 발생한 손해는 회원에게 그 책임이 있습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제7조(회원 탈퇴 및 자격 상실 등)</strong>
+                          <p class="txt">
+                            1. 회원은 "사이트"에 언제든지 탈퇴를 요청할 수 있으며 "사이트"는 즉시 회원탈퇴를 처리합니다.<br>
+                            2. 회원이 다음 각 호의 사유에 해당하는 경우, "사이트"는 회원자격을 제한 및 정지시킬 수 있습니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 가입 신청 시에 허위 내용을 등록한 경우<br>
+                            &nbsp;&nbsp;&nbsp;② "사이트"를 이용하여 구입한 재화·용역 등의 대금, 기타 "사이트" 이용에 관련하여 회원이 부담하는 채무를 기일에 지급하지 않는 경우<br>
+                            &nbsp;&nbsp;&nbsp;③ 다른 사람의 "사이트" 이용을 방해하거나 그 정보를 도용하는 등 전자상거래질서를 위협하는 경우 "사이트"를 이용하여 법령과 이 약관이 금지하는 행위를 하거나 공서양속에 반하는 행위를 하는 경우<br>
+                            3. "사이트"가 회원 자격을 제한·정지 시킨 후, 동일한 행위가 2회 이상 반복되거나 30일 이내에 그 사유가 시정되지 아니하는 경우 "사이트"는 회원자격을 상실시킬 수 있습니다.<br>
+                            4. "사이트"가 회원자격을 상실시키는 경우에는 회원등록을 말소합니다. 이 경우 회원에게 이를 통지하고, 회원등록 말소 전에 최소 30일 이상의 기간을 정하여 소명할 기회를 부여합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제8조(회원에 대한 통지)</strong>
+                          <p class="txt">
+                            1. "사이트"가 회원에 대한 통지를 하는 경우, 회원이 "사이트"에 미리 약정하여 지정제출한 전자우편 주소로 할 수 있습니다.<br>
+                            2. "사이트"는 불특정다수 회원에 대한 통지의 경우 1주일이상 "사이트" 게시판에 게시함으로써 개별 통지에 갈음할 수 있습니다. 다만, 회원 본인의 거래와 관련하여 중대한 영향을 미치는 사항에 대하여는 개별통지를 합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제9조(구매신청)</strong>
+                          <p class="txt">
+                            1. “사이트"이용자는 "사이트"상에서 이하의 방법에 의하여 구매를 신청하며, “사이트”는 이용자가 구매신청을 함에 있어서 다음의 각 내용을 알기 쉽게 제공하여야 합니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 받는 사람의 성명, 주소, 전화번호 입력<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(단, 로그인(회원가입)하여 기존 입력된 정보 사용 또는 변경 입력)<br>
+                            &nbsp;&nbsp;&nbsp;② 재화 또는 용역의 검색 및 선택<br>
+                            &nbsp;&nbsp;&nbsp;③ 약관내용, 청약철회권이 제한되는 서비스, 설치비, 운송비 비용부담과 관련한 내용에 대한 확인<br>
+                            &nbsp;&nbsp;&nbsp;④ 사이트결제방법의 선택<br>
+                            2. 결제와 관련하여 “회원”이 입력한 정보 및 그 정보와 관련하여 발생한 책임과 불이익은 전적으로 “회원”이 부담하여야 합니다.<br>
+                            3. “사이트”가 개인정보의 처리 업무를 위탁하는 경우에는 1) 위탁하는 업무의 내용과 2) 개인정보 처리 업무를 위탁받아 처리하는 자를 이용자가 언제든지 쉽게 확인할 수 있도록 본 사이트의 “개인정보처리방침”에 공개하는 등 련 법령에 따릅니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제10조 (계약의 성립)</strong>
+                          <p class="txt">
+                            1. "사이트"는 제9조와 같은 구매신청에 대하여 다음 각 호에 해당하면 승낙하지 않을 수 있습니다. 다만, 미성년자와 계약을 체결하는 경우에는 법정대리인의 동의를 얻지 못하면 미성년자 본인 또는 법정대리인이 계약을 취소할 수 있다는 내용을 고지하여야 하지 않는 한 승낙합니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 신청 내용에 허위, 기재누락, 오기가 있는 경우<br>
+                            &nbsp;&nbsp;&nbsp;② 미성년자가 담배, 주류등 청소년보호법에서 금지하는 재화 및 용역을 구매하는 경우<br>
+                            &nbsp;&nbsp;&nbsp;③ 기타 구매신청에 승낙하는 것이 "사이트" 기술상 현저히 지장이 있다고 판단하는 경우<br>
+                            2. "사이트"의 승낙이 제12조제1항의 수신확인통지형태로 이용자에게 도달한 시점에 계약이 성립한 것으로 봅니다.<br>
+                            3. “사이트”의 승낙 의사표시에는 이용자의 구매 신청에 대한 확인 및 판매가능 여부, 구매신청의 정정 취소 등에 관한 정보등을 포함하여야 합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제11조 (지급방법)</strong>
+                          <p class="txt">
+                            1. "사이트"에서 구매한 재화 또는 용역에 대한 대금지급방법은 다음 각 호의 하나로 할 수 있습니다. 단, 이의 운영방식은 회사가 정한 바에 의합니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 계좌이체<br>
+                            &nbsp;&nbsp;&nbsp;② 신용카드결제<br>
+                            &nbsp;&nbsp;&nbsp;③ 온라인무통장입금<br>
+                            &nbsp;&nbsp;&nbsp;④ 전자화폐에 의한 결제<br>
+                            2. “사이트”는 “회원”의 대금 지급에 법적, 기술적 문제가 발생하거나 “사이트”가 예견하지 못한 장애(은행 통신망 장애 등)가 발생하는 경우 “사이트”의 정책에 따라 “회원”에게 결제 수단의 변경을 요청하거나 잠정 결제 보류 내지 거부할 수 있습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제12조(수신확인통지·구매신청 변경 및 취소)</strong>
+                          <p class="txt">
+                            1. “사이트”는 이용자의 구매신청이 있는 경우 이용자에게 수신확인통지를 합니다.<br>
+                            2. 수신확인통지를 받은 이용자는 의사표시의 불일치 등이 있는 경우에는 수신확인통지를 받은 후 즉시 구매신청 변경 및 취소를 요청할 수 있습니다.<br>
+                            3. "사이트"는 배송 전 이용자의 구매신청 변경 및 취소 요청이 있는 때에는 지체 없이 그 요청에 따라 처리합니다. 다만 이미 대금을 지불한 경우에는 제15조의 청약철회 등에 관한 규정에 따릅니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제13조(배송)</strong>
+                          <p class="txt">
+                            1. “사이트”는 이용자와 재화 등의 공급시기에 관하여 별도의 약정이 없는 이상, 이용자가 청약을 한 날부터 7일 이내에 재화 등을 배송할 수 있도록 주문제작, 포장 등 기타의 필요한 조치를 취합니다. 다만, “사이트”가 이미 재화 등의 대금의 전부 또는 일부를 받은 경우에는 대금의 전부 또는 일부를 받은 날부터 3영업일 이내에 조치를 취합니다. 이때 “사이트”는 이용자가 재화 등의 공급 절차 및 진행 사항을 확인할 수 있도록 적절한 조치를 합니다.<br>
+                            2. “사이트”는 이용자가 구매한 재화에 대해 배송수단, 수단별 배송비용 부담자, 수단별 배송기간 등을 명시합니다. 만약 “사이트”가 약정 배송기간을 초과한 경우에는 그로 인한 이용자의 손해를 배상하여야 합니다. 다만 “사이트”가 고의․과실이 없음을 입증한 경우에는 그러하지 아니합니다. "사이트"는 이용자가 구매한 재화에 대해 배송수단, 수단별 배송비용 부담자, 수단별 배송기간 등을 명시합니다. 만약 "사이트"의 고의·과실로 약정 배송기간을 초과한 경우에 그로 인한 이용자의 손해를 배상합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제14조(환급, 반품 및 교환)</strong>
+                          <p class="txt">
+                            1. "사이트"는 이용자가 구매 신청한 재화 또는 용역이 품절 등의 사유로 재화의 인도 또는 용역의 제공을 할 수 없을 때에는 지체 없이 그 사유를 이용자에게 통지하고, 사전에 재화 또는 용역의 대금을 받은 경우에는 대금을 받은 날부터 23영업일 이내에 환급하거나 환급에 필요한 조치를 취하여야 하고, 그렇지 않은 경우에는 재화 등을 반환 받은 날부터 3영업일 이내에 이미 지급 받은 재화 등의 대금을 환급하여야 합니다.<br>
+                            2. 다음 각 호의 경우에는 "사이트"는 배송된 재화일지라도 재화를 반품 받은 다음 영업일 이내에 이용자의 요구에 따라 즉시 환급, 반품 및 교환 조치를 합니다. 다만 그 요구기한은 배송된 날로부터 20일 이내로 합니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 배송된 재화가 주문내용과 상이하거나 "사이트"가 제공한 정보와 상이할 경우<br>
+                            &nbsp;&nbsp;&nbsp;② 배송된 재화가 파손, 손상되었거나 오염되었을 경우<br>
+                            &nbsp;&nbsp;&nbsp;③ 재화가 광고에 표시된 배송기간보다 늦게 배송된 경우<br>
+                            &nbsp;&nbsp;&nbsp;④ 전자상거래 등에서의 소비자보호에 관한 법률 제13조에 의하여 광고에 표시하여야 할 사항을 표시하지 아니한 상태에서 이용자의 청약이 이루어진 경우 단, 재화 등의 내용이 표시,광고 내용 또는 계약내용과 다르게 이행된 경우에는, 당해 재화를 공급받은 날부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내에 청약철회를 할 수 있습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제15조(청약철회 등)</strong>
+                          <p class="txt">
+                            1. “사이트”와 재화등의 구매에 관한 계약을 체결한 이용자는 「전자상거래 등에서의 소비자보호에 관한 법률」 제13조 제2항에 따른 계약내용에 관한 서면을 받은 날(그 서면을 받은 때보다 재화 등의 공급이 늦게 이루어진 경우에는 재화 등을 공급받거나 재화 등의 공급이 시작된 날을 말합니다) 수신 확인의 통지를 받은 날로부터 7일 이내에는 청약의 철회를 할 수 있습니다. 다만, 청약철회에 관하여 「전자상거래 등에서의 소비자보호에 관한 법률」에 달리 정함이 있는 경우에는 동 법 규정에 따릅니다.<br>
+                            2. “회원”의 단순 변심에 의한 취소 및 환불일 경우 이의 처리에 발생하는 수수료는 “회원”이 부담합니다.<br>
+                            3. 이용자는 재화 등을 배송 받은 경우 다음 각호의 해당하는 경우에는 반품 및 교환을 할 수 없습니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 이용자에게 책임 있는 사유로 재화 등이 멸실 또는 훼손된 경우(다만, 재화 등의 내용을 확인하기 위하여 포장 등을 훼손한 경우에는 청약철회를 할 수 있습니다)<br>
+                            &nbsp;&nbsp;&nbsp;② 이용자의 사용 또는 일부 소비에 의하여 재화 등의 가치가 현저히 감소한 경우<br>
+                            &nbsp;&nbsp;&nbsp;③ 시간의 경과에 의하여 재판매가 곤란할 정도로 재화등의 가치가 현저히 감소한 경우<br>
+                            &nbsp;&nbsp;&nbsp;④ 같은 성능을 지닌 재화 등으로 복제가 가능한 경우 그 원본인 재화 등의 포장을 훼손한 경우<br>
+                            4. 제3항제2호 내지 제4호의 경우에 “사이트”가 사전에 청약철회 등이 제한되는 사실을 소비자가 쉽게 알 수 있는 곳에 명기하거나 시용상품을 제공하는 등의 조치를 하지 않았다면 이용자의 청약철회 등이 제한되지 않습니다.<br>
+                            5. 이용자는 제1항 및 제3항의 규정에 불구하고 재화 등의 내용이 표시·광고 내용과 다르거나 계약내용과 다르게 이행된 때에는 당해 재화 등을 공급받은 날부터 3월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내에 청약철회 등을 할 수 있습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제16조(청약철회 등의 효과)</strong>
+                          <p class="txt">
+                            1. “사이트”는 이용자로부터 재화 등을 반환 받은 경우 3영업일 이내에 이미 지급받은 재화등의 대금을 환급합니다. 이 경우 “사이트”가 이용자에게 재화등의 환급을 지연한 때에는 그 지연기간에 대하여 「전자상거래 등에서의 소비자보호에 관한 법률 시행령」제21조의2에서 정하는 지연기간에 대하여 공정거래위원회가 정하여 고시하는 지연이자율을 곱하여 산정한 지연이자를 지급합니다.<br>
+                            2. “사이트”는 위 대금을 환급함에 있어서 이용자가 신용카드 또는 전자화폐 등의 결제수단으로 재화등의 대금을 지급한 때에는 지체 없이 당해 결제수단을 제공한 사업자로 하여금 재화등의 대금의 청구를 정지 또는 취소하도록 요청합니다.<br>
+                            3. 청약철회등의 경우 공급받은 재화 등의 반환에 필요한 비용은 이용자가 부담합니다. “사이트”는 이용자에게 청약철회등을 이유로 위약금 또는 손해배상을 청구하지 않습니다. 다만 재화등의 내용이 표시, 광고 내용과 다르거나 계약내용과 다르게 이행되어 청약철회 등을 하는 경우 재화등의 반환에 필요한 비용은 “사이트”가 부담합니다.<br>
+                            4. 이용자가 재화등을 제공받을 때 발송비를 부담한 경우에 “사이트”는 청약 철회 시 그 비용을 누가 부담하는지를 이용자가 알기 쉽도록 명확하게 표시합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제17조(개인정보보호)</strong>
+                          <p class="txt">
+                            1. "사이트"는 이용자의 정보수집 시 ‘사상 및 신념’, ‘노동조합 및 정당의 가입 및 탈퇴’, ‘정치적 견해’, ‘건강’ 등 정보주체의 사생활을 침해할 우려가 있는 민감한 개인정보의 수집을 엄격히 제한하고 있으며, 구매계약 이행에 필요한 최소한의 정보를 수집하되 다음 사항을 필수사항으로 하고, 그 외 사항은 선택사항으로 합니다. “사이트”는 회원가입시 구매계약이행에 필요한 정보를 미리 수집하지 않습니다. 다만, 관련 법령상 의무이행을 위하여 구매계약 이전에 본인확인이 필요한 경우로서 최소한의 특정 개인정보를 수집하는 경우에는 그러하지 아니합니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 성명<br>
+                            &nbsp;&nbsp;&nbsp;② 주소<br>
+                            &nbsp;&nbsp;&nbsp;③ 휴대전화번호<br>
+                            &nbsp;&nbsp;&nbsp;④ 전자메일주소 (회원의 경우)<br>
+                            &nbsp;&nbsp;&nbsp;⑤ 비밀번호 (회원의 경우)<br>
+                            2. "사이트"가 이용자의 개인식별이 가능한 개인정보를 수집하는 때에는 반드시 당해 이용자에게 그 목적을 고지하고 동의를 받습니다.<br>
+                            3. 제공된 개인정보는 당해 이용자의 동의 없이 목적 외의 이용이나 제3자에게 제공할 수 없으며, 새로운 이용목적이 발생한 경우 또는 제3자에게 제공하는 경우에는 이용·제공단계에서 당해 이용자에게 그 목적을 고지하고 동의를 받습니다. 다만, 다음과 같은 경우에는 예외로 합니다.<br>
+                            &nbsp;&nbsp;&nbsp;① 법률에 특별한 규정이 있거나, 법령상 의무를 준수하기 위하여 불가피한 경우<br>
+                            &nbsp;&nbsp;&nbsp;② 통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 식별할 수 없는 형태로 제공하는 경우<br>
+                            4. "사이트"가 제2항과 제3항에 의해 이용자의 동의를 받아야 하는 경우에는 이용자의 동의 없이 처리할 수 있는 개인정보와 동의가 필요한 개인정보를 구분합니다. 이용자는 언제든지 이 동의를 철회할 수 있습니다.<br>
+                            5. 이용자는 언제든지 "사이트"가 처리하는 자신의 개인정보에 대해 열람, 정정, 삭제 및 처리정지를 요구할 수 있으며 "사이트"는 이에 대해 지체 없이 필요한 조치를 취할 의무를 집니다. 이용자가 처리정지를 요구한 경우에는 "사이트"는 이용자의 요구에 따라 개인정보 처리의 전부 또는 일부를 정지합니다.<br>
+                            6. "사이트"는 개인정보 보호를 위하여 이용자의 개인정보를 처리하는 자를 최소한으로 제한합니다.<br>
+                            7. "사이트"는 개인정보의 수집, 이용 목적을 달성한 때에는 해당 개인정보를 지체 없이 파기합니다.<br>
+                            8. “사이트”는 개인정보의 수집, 이용, 제공에 관한 동의란을 미리 선택한 것으로 설정해두지 않습니다. 필수 수집항목이 아닌 개인정보의 수집, 이용, 제공에 관한 이용자의 동의거절 시 제한되는 서비스를 구체적으로 명시하고, 필수수집항목이 아닌 개인정보의 수집, 이용, 제공에 관한 이용자의 동의 거절을 이유로 회원가입 등 서비스 제공을 제한하거나 거절하지 않습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제18조("사이트"의 의무)</strong>
+                          <p class="txt">
+                            1. "사이트"는 법령과 이 약관이 금지하거나 공서양속에 반하는 행위를 하지 않으며 이 약관이 정하는 바에 따라 지속적이고, 안정적으로 재화·용역을 제공하는 데 최선의 노력을 다하여야 합니다.<br>
+                            2. "사이트"는 “회원”이 안전하게 “서비스”를 이용할 수 있도록 “회원”의 개인정보(신용정보 포함)보호를 위한 보안 시스템을 갖추어야 하며 개인정보처리방침을 공시하고 준수합니다.<br>
+                            3. “사이트”가 상품이나 용역에 대하여 「표시․광고의 공정화에 관한 법률」 제3조 소정의 부당한 표시․광고행위를 함으로써 이용자가 손해를 입은 때에는 이를 배상할 책임을 집니다.<br>
+                            4. “사이트”는 이용자가 원하지 않는 영리목적의 광고성 전자우편을 발송하지 않습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제19조( 회원의 ID 및 비밀번호에 대한 의무)</strong>
+                          <p class="txt">
+                            1. 제17조의 경우를 제외한 ID와 비밀번호에 관한 관리책임은 회원에게 있습니다.<br>
+                            2. 회원은 자신의 ID 및 비밀번호를 제3자에게 이용하게 해서는 안됩니다.<br>
+                            3. 회원이 자신의 ID 및 비밀번호를 도난 당하거나 제3자가 사용하고 있음을 인지한 경우에는 바로 "사이트"에 통보하고 "사이트"의 안내가 있는 경우에는 그에 따라야 합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제20조(이용자의 의무)</strong>
+                          <p class="txt">
+                            이용자는 다음 행위를 하여서는 안됩니다.<br>
+                            1. 신청 또는 변경 시 허위 사실을 기재하거나, 다른 회원의 ID 및 PASSWORD를 도용, 부정하게 사용하는 행위<br>
+                            2. “사이트”의 서비스 정보를 이용하여 얻은 정보를 “사이트”의 사전 승낙 없이 복제 또는 유통시키거나 상업적으로 이용하는 행위<br>
+                            3. 타인의 명예를 손상시키거나 불이익을 주는 행위<br>
+                            4. "사이트"의 저작권, 제3자의 저작권 등 기타 권리를 침해하는 행위<br>
+                            5. 서비스와 관련된 설비의 오동작이나, 정보 등의 파괴 및 혼란을 유발시키는 컴퓨터 바이러스 감염 치료를 등록 또는 유포하는 행위<br>
+                            6. 다른 회원의 개인정보를 수집, 저장, 공개하는 행위<br>
+                            7. 수치심이나 혐오감 또는 공포심을 일으키는 말이나 음향, 글이나 화상 또는 영상을 계속하여 “사이트” 또는 상대방에게 도달하게 하여 “사이트” 또는 상대방의 일상적 생활을 방해하는 행위
+                            8. 기타 불법적이거나 부당한 행위
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제21조(연결"사이트"과 피연결"사이트" 간의 관계)</strong>
+                          <p class="txt">
+                            1. 상위 "사이트"와 하위 "사이트"가 하이퍼 링크(예: 하이퍼 링크의 대상에는 문자, 그림 및 동화상 등이 포함됨)방식 등으로 연결된 경우, 전자를 연결 "사이트"(웹 사이트)이라고 하고 후자를 피연결 "사이트"(웹사이트)이라고 합니다.<br>
+                            2. 연결 "사이트"는 피연결 "사이트"가 독자적으로 제공하는 재화·용역에 의하여 이용자와 행하는 거래에 대하여는 그 거래에 대한 보증책임을 지지 않는다는 뜻을 연결“몰”의 초기화면 또는 연결되는 시점의 팝업화면으로 명시한 경우에는 그 거래에 대한내용을 사이트의 게시판을 통해 공지하며, 이 경우 당해 거래로 발생한 문제에 대하여 연결 "사이트"는 보증책임을 지지 않습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제22조(저작권의 귀속 및 이용제한)</strong>
+                          <p class="txt">
+                            1. "사이트"가 작성한 저작물에 대한 저작권 기타 지적재산권은 회사에 귀속합니다.<br>
+                            2. 이용자는 "사이트"를 이용함으로써 얻은 정보를 "사이트"의 사전 승낙없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자에게 이용하게 하여서는 안됩니다.<br>
+                            3. “사이트”는 약정에 따라 이용자에게 귀속된 저작권을 사용하는 경우 당해 이용자에게 통보하여야 합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제23조(분쟁해결)</strong>
+                          <p class="txt">
+                            1. "사이트"는 이용자가 제기하는 정당한 의견이나 불만을 반영하고 그 피해를 보상처리하기 위하여 피해보상처리기구를 설치·운영합니다.<br>
+                            2. "사이트"는 이용자로부터 제출되는 불만사항 및 의견은 우선적으로 그 사항을 처리합니다. 다만, 신속한 처리가 곤란한 경우에는 이용자에게 그 사유와 처리일정을 즉시 통보해 드립니다.<br>
+                            3. "사이트"와 이용자간에 발생한 분쟁과 관련하여 이용자의 피해구제신청이 있는 경우에는 공정거래위원회 또는 시·도지사가 의뢰하는 분쟁조정기관, 전자거래기본법 제28조 및 동 시행령 제15조에 의하여 설치된 전자거래분쟁조정위원회의 조정에 따를 수 있습니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">▶ 제24조(재판권 및 준거법)</strong>
+                          <p class="txt">
+                            1. "사이트"와 이용자간에 발생한 전자상거래 분쟁에 관한 소송은 민사소송법상의 관할법원에 제기합니다.
+                            2. "사이트"와 이용자간에 제기된 전자상거래 소송에는 대한민국법을 적용합니다.
+                          </p>
+                        </div>
+
+                        <div class="border-text">
+                          <strong class="tit">부 칙(시행일)</strong>
+                          <p class="txt">1. 이 약관은 2020년 3월6일부터 시행한다.</p>
+                        </div>
+
+                      </div>
+
+                      <div class="agree-box">
+                        <span>서비스 약관에 동의합니다.</span>
+                        <div class="btn-box">
+                          <label for="agreeBtn1"><input type="radio" id="agreeBtn1" class="agree-btn" name="btn1"><span class="agree">예</span></label>
+                          <label for="disareeBtn1"><input type="radio" id="disareeBtn1" class="disagree-btn" name="btn1"><span class="disagree">아니오</span></label>
+                        </div>
+                      </div>
+
+
+                    </li>
+
+                    <li class="border">
+                      <div class="border-title"><h4>개인정보 수집, 이용 동의(필수)</h4></div>
+
+                      <div class="scroll-box">
+                        <table>
+                          <thead>
+                           <tr>
+                             <th>개인정보 수집, 이용 목적</th>
+                             <th>개인정보의 항목</th>
+                             <th>보유 및 이용기간</th>
+                           </tr> 
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>회원가입 및 관리</td>
+                              <td>- 필수 : 이름, 전자메일주소(ID), 비밀번호(PW),<br>- 선택 : 휴대전화번호, 주소</td>
+                              <td>수집 목적 달성 시 또는 회원 탈퇴 시 까지</td>
+                            </tr>
+                            <tr>
+                              <td>상품 구매 및 서비스 제공</td>
+                              <td>- 필수 : 이름, 전자메일주소(ID), 비밀번호(PW), 휴대전화번호, 주소</td>
+                              <td>재화, 서비스 공급 완료 및 요금 결제, 정산 완료 시까지</td>
+                            </tr>
+                            <tr>
+                              <td>휴대전화를 이용한 본인인증 시</td>
+                              <td>- 필수 : 핸드폰 본인 인증(이름, 생년월일, 성별, 휴대전화번호, 내국인 또는 외국인 여부)</td>
+                              <td>수집 목적 달성 시</td>
+                            </tr>
+                            <tr>
+                              <td>온라인 서비스 이용</td>
+                              <td>- 필수 : 회원정보 변경이력, 접속로그, 쿠키, 접속 IP 정보</td>
+                              <td>수집 목적 달성 시</td>
+                            </tr>
+                            <tr>
+                              <td>고객센터 문의 시</td>
+                              <td>- 선택 : 성명, 이메일, 연락처, 주소</td>
+                              <td>수집 목적 달성 시</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        
+                        <p class="txt">개인정보 수집, 이용에 동의하지 않을 권리가 있습니다.<br> 단, 동의 거부 시 회원가입이 제한됩니다.</p>
+                      </div>
+
+                      <div class="agree-box">
+                        <span>개인정보 수집, 이용에 동의합니다.</span>
+                        <div class="btn-box">
+                          <label for="agreeBtn2"><input type="radio" id="agreeBtn2" class="agree-btn" name="btn2"><span class="agree">예</span></label>
+                          <label for="disareeBtn2"><input type="radio" id="disareeBtn2" class="disagree-btn" name="btn2"><span class="disagree">아니오</span></label>
+                        </div>
+                      </div>
+
+                    </li>
+
+                    <li class="all-agree">
+                      <label for="chkAll"><input type="checkbox" id="chkAll" name="chkAll" class="chk-all" value="모두 동의합니다."><span>모두 동의합니다.</span></label>
+                    </li>
+
+                  </ul>
+                </div>
+
+              </div>
+
+              <div class="submit-wrap">
+                <button type="submit" class="submit-btn">회원 가입</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="gap">
+          <div class="wrap">
+
+            <div class="top">
+
+              <div class="left">
+                <div class="logo-wrap">
+                  <div class="logo-gap">
+                    <img src="./images/logo09.png" alt="logo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="center">
+                <div class="text-box">
+                  <p><span>미미<i></i></span>대표자명&nbsp;&nbsp;김도하</p>
+                  <p><span>사업자등록번호&nbsp;&nbsp;000-00-00000<i></i></span>통신판매업신고번호&nbsp;&nbsp;2022-서울마포-0000호</p>
+                  <p><i class="fa fa-map-marker"></i>서울특별시 마포구 월드컵로 212</p>
+                  <p><i class="fa fa-phone"></i>+82 (0) <a href="tel:010-7503-7095" title="010-7503-7095">010-7503-7095</a></p>
+                  <p><i class="fa fa-envelope"></i><a href="mailto:damdadodam_@gmail.com" title="damdadodam_@gmail.com"></a>damdadodam_@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="right">
+                <div class="permit-list">
+                  <a href="#none">개인정보처리방침</a>
+                  <a href="#none">이용약관</a>
+                </div>
+                <ul class="sns-list">
+                  <li class="sns-item">
+                    <a href="#none" title="카카오 채널"><img src="./images/ico_kakao.png" alt="kakao"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="유튜브 채널"><img src="./images/ico_youtube.png" alt="youtube"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="인스타그램"><img src="./images/ico_insta.png" alt="instagram"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="페이스북"><img src="./images/ico_facebook.png" alt="facebook"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="트위터"><img src="./images/ico_twit.png" alt="twitter"></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="bottom">
+              <p>©COPYRIGHT<i></i></p>
+              <p>예술전시공간미미<i></i></p>
+              <p>ALL RIGTHS RESERVED.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="goTopBox">
+      <button class="top-btn">
+        <i class="fa fa-angle-up"></i>
+      </button>
+    </div>
+
+    <div id="modal">
+      <div class="container">
+        <ul>
+          <li>
+            <h2>알림 메시지</h2>
+            <button class="modal-close colse-btn">
+              <span>
+                <i class="line"></i>
+                <i class="line"></i>
+              </span>
+            </button>
+          </li>
+          <li>
+            <p class="modal-message"></p>
+          </li>
+        </ul>
+  
+        <div class="button-box"><button class="modal-close ok-btn">확인</button></div>
+      </div>
+    </div>
+
+
+  </div>
+  
+  <script src="../script/member.js"></script>
+
+</body>
+</html>

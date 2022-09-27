@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미미 | 회원 로그인</title>
+  <link rel="shortcut icon" type="image/ico" href="./images/icon.ico">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/response.css">
+  <script src="../script/lib/jquery-1.12.4.min.js"></script>
+  <script src="../script/lib/jquery.easing.1.3.js"></script>
+  <script src="../script/lib/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <ul id="skip">
+    <li><a href="#nav" title="메뉴 바로가기">메뉴 바로가기</a></li>
+    <li><a href="#main" title="메인 바로가기">메인 바로가기</a></li>
+  </ul>
+
+  <div id="wrap">
+
+    <header id="header">
+      <div class="container">
+        <div class="gap">
+          <div class="wrap">
+
+            <div class="menu-btn-box">
+              <a href="#none" class="menu-btn">
+                <span>
+                  <i class="line line1"></i>
+                  <i class="line line2"></i>
+                  <i class="line line3"></i>
+                </span>
+              </a>
+            </div>
+
+            <div class="main-menu-wrap">
+              <nav id="nav">
+  
+                <ul class="main-menu-list">
+  
+                  <li class="main-menu even-num">
+                    <a href="#none" class="main-btn" title="소개">소개</a>
+                    <div class="sub sub1 sub-even">
+                      <div class="sub-gap">
+                        <ul>
+                          <li><a href="#none" title="소개">소개</a></li>
+                          <li><a href="#none" title="공지사항">공지사항</a></li>
+                          <li><a href="#none" title="소식">소식</a></li>
+                          <li><a href="#none" title="오시는 길">오시는 길</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu odd-num">
+                    <a href="#none" class="main-btn" title="작품">작품</a>
+                    <div class="sub sub2 sub-odd">
+                      <div class="sub-gap">
+                        <ul>
+                          <li>
+                            <a href="#none" class="sub-btn" title="주제">주제</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="전체"><span>전체</span></a></li>
+                                  <li><a href="#none" title="인물"><span>인물</span></a></li>
+                                  <li><a href="#none" title="풍경"><span>풍경</span></a></li>
+                                  <li><a href="#none" title="정물"><span>정물</span></a></li>
+                                  <li><a href="#none" title="동물"><span>동물</span></a></li>
+                                  <li><a href="#none" title="추상"><span>추상</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="크기">크기</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" class="sub-sub-btn" title="24 X 19CM"><span>24 X 19CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~33.4 X 24.3CM"><span>~33.4 X 24.3CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~40.9 X 31.8CM"><span>~40.9 X 31.8CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~53 X 45.5CM"><span>~53 X 45.5CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~72.7 X 60.6CM"><span>~72.7 X 60.6CM</span></a></li>
+                                  <li><a href="#none" class="sub-sub-btn" title="~80 X 65.2CM"><span>~80 X 65.2CM</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu even-num">
+                    <a href="#none" class="main-btn" title="작가">작가</a>
+                    <div class="sub sub3 sub-even">
+                      <div class="sub-gap">
+                        <ul>
+                          <li><a href="#none" title="작가 소개">작가 소개</a></li>
+                          <li><a href="#none" title="작가 작품">작가 작품</a></li>
+                          <li><a href="#none" title="작가 전시">작가 전시</a></li>
+                          <li><a href="#none" title="작가 소식">작가 소식</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu odd-num">
+                    <a href="#none" class="main-btn" title="전시">전시</a>
+                    <div class="sub sub4 sub-odd">
+                      <div class="sub-gap">
+                        <ul>
+                          <li>
+                            <a href="#none" class="sub-btn" title="서울">서울</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="창원">창원</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="제주한림">제주한림</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="여의도">여의도</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#none" class="sub-btn" title="온라인">온라인</a>
+                            <div class="sub-depth2">
+                              <div class="sub-gap">
+                                <ul>
+                                  <li><a href="#none" title="현재 전시"><span>현재 전시</span></a></li>
+                                  <li><a href="#none" title="전시 예정"><span>전시 예정</span></a></li>
+                                  <li><a href="#none" title="지난 전시"><span>지난 전시</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                  <li class="main-menu even-num">
+                    <a href="#none" class="main-btn" title="구매">구매</a>
+                    <div class="sub sub5 sub-even">
+                      <div class="sub-gap">
+                        <ul>
+                          <li><a href="#none" title="추천 작품">추천 작품</a></li>
+                          <li><a href="#none" title="기획 상품">기획 상품</a></li>
+                          <li><a href="#none" title="한정 상품">한정 상품</a></li>
+                          <li><a href="#none" title="기념 선물">기념 선물</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+  
+                </ul>
+
+              </nav>
+            </div>
+
+            <div class="logo-box"><a href="../index.html" title="미미"><img class="logo-top" src="./images/logo09.png" alt="logo"></a></div>
+
+            <aside id="aside">
+              <div class="user-box"><a href="#none" class="user-btn" title="개인 회원"><i class="fa fa-user"></i></a></div>
+              <ul class="user-menu-list">
+                <li><a href="./index.html" title="로그인">로그인</a><i class="bar-icon"></i></li>
+                <li><a href="../member/index.html" title="회원가입">회원가입</a><i class="bar-icon"></i></li>
+                <li><a href="#none" title="작가 등록">작가 등록</a><i class="bar-icon"></i></li>
+                <li><a href="#none" class="globe-icon"><i class="fa fa-globe"></i></a></li>
+              </ul>
+            </aside>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <div class="gap">
+          <div class="wrap">
+            
+            <div class="title-wrap">
+              <span>미미<i></i></span><strong>회원 로그인</strong>
+              <h2>회원 로그인</h2>
+            </div>
+
+            <div class="content-wrap">
+              <div class="login-logo"><img src="./images/logo08.png" alt="logo"></div>
+
+              <div class="content-box">
+                <h3>회원 로그인</h3>
+
+                <div class="form-wrap">
+                  <form autocomplete="off" action="./response.php" method="post" name="login" id="login">
+                    <ul id="loginForm">
+
+                      <li>
+                        <div class="input-box id-box">
+                          <label for="inputId"><i class="fa fa-user"></i></label>
+                          <input type="text" name="inputId" id="inputId" placeholder="아이디를 입력해 주세요." maxlength="20">
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="input-box pw-box">
+                          <label for="inputPw"><i class="fa fa-lock"></i></label>
+                          <input type="password" name="inputPw" id="inputPw" placeholder="비밀번호를 입력해 주세요." maxlength="20">
+                        </div>
+                      </li>
+
+                      <li class="button-box">
+                        <button type="submit" class="submit-btn">로그인</button>
+                      </li>
+                      
+                      <li class="find-id-pw">
+                        <a href="#none">아이디 찾기</a><a href="#none">비밀번호 찾기</a>
+                      </li>
+
+                    </ul>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer id="footer">
+      <div class="container">
+        <div class="gap">
+          <div class="wrap">
+
+            <div class="top">
+
+              <div class="left">
+                <div class="logo-wrap">
+                  <div class="logo-gap">
+                    <img src="./images/logo09.png" alt="logo">
+                  </div>
+                </div>
+              </div>
+
+              <div class="center">
+                <div class="text-box">
+                  <p><span>미미<i></i></span>대표자명&nbsp;&nbsp;김도하</p>
+                  <p><span>사업자등록번호&nbsp;&nbsp;000-00-00000<i></i></span>통신판매업신고번호&nbsp;&nbsp;2022-서울마포-0000호</p>
+                  <p><i class="fa fa-map-marker"></i>서울특별시 마포구 월드컵로 212</p>
+                  <p><i class="fa fa-phone"></i>+82 (0) <a href="tel:010-7503-7095" title="010-7503-7095">010-7503-7095</a></p>
+                  <p><i class="fa fa-envelope"></i><a href="mailto:damdadodam_@gmail.com" title="damdadodam_@gmail.com"></a>damdadodam_@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="right">
+                <div class="permit-list">
+                  <a href="#none">개인정보처리방침</a>
+                  <a href="#none">이용약관</a>
+                </div>
+                <ul class="sns-list">
+                  <li class="sns-item">
+                    <a href="#none" title="카카오 채널"><img src="./images/ico_kakao.png" alt="kakao"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="유튜브 채널"><img src="./images/ico_youtube.png" alt="youtube"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="인스타그램"><img src="./images/ico_insta.png" alt="instagram"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="페이스북"><img src="./images/ico_facebook.png" alt="facebook"></a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="#none" title="트위터"><img src="./images/ico_twit.png" alt="twitter"></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="bottom">
+              <p>©COPYRIGHT<i></i></p>
+              <p>예술전시공간미미<i></i></p>
+              <p>ALL RIGTHS RESERVED.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="goTopBox">
+      <button class="top-btn">
+        <i class="fa fa-angle-up"></i>
+      </button>
+    </div>
+
+    <div id="modal">
+      <div class="container">
+        <ul>
+          <li>
+            <h2>알림 메시지</h2>
+            <button class="modal-close colse-btn">
+              <span>
+                <i class="line"></i>
+                <i class="line"></i>
+              </span>
+            </button>
+          </li>
+          <li>
+            <p class="modal-message"></p>
+          </li>
+        </ul>
+  
+        <div class="button-box"><button class="modal-close ok-btn">확인</button></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../script/login_session.js"></script>
+  
+</body>
+</html>

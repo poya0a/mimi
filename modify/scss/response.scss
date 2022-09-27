@@ -1,0 +1,191 @@
+@media all and (max-width: 1770px){
+
+  #wrap {
+    #header .container .gap {padding: 0 3.941146%;}
+    #main .container .gap {padding: 100px 3.941146% 0 3.941146%;}
+    #footer .container .gap .wrap {padding: 100px 3.941146% 0 3.941146%;}
+  }
+
+}
+
+@media all and (max-width: 1170px){
+
+  #wrap #goTopBox {bottom: 20px; right: 20px;}
+
+}
+
+@media all and (max-width: 980px){
+
+  #wrap #goTopBox {
+    width: 28px;
+    height: 28px;
+    .top-btn i {font-size: 28px;}
+  }
+
+}
+
+@media all and (max-width: 900px){
+
+  #wrap #header {
+    height: 160px;
+    .container .gap .wrap {
+      .menu-btn-box {top: 105px;}
+      .main-menu-wrap {top: 80px;
+        #nav {height: 80px;}
+      }
+      .logo-box {margin: 0 auto auto auto;}
+      #aside {
+        top: 80px;
+        .user-box {display: block;}
+        .user-menu-list {display: none;}
+      }
+    }
+  }
+
+  #wrap #footer .container .gap .wrap {
+    padding: 0 3.941146%;
+    .top {
+      display: block;
+      height: 305px;
+      margin: 0;
+    }
+  }
+
+}
+
+@media all and (max-width: 840px){
+
+  #wrap #header .container .gap .wrap .main-menu-wrap #nav {
+    .main-menu-list .main-menu {
+      .main-btn {padding: 0 10px;}
+      .sub {left: 10px;}
+    }
+  }
+}
+
+@media all and (max-width: 600px){
+
+  #wrap #modal {padding: 0 10%;
+    .container {width: 100%;
+      .button-box .ok-btn {font-size: 12px;}
+    }
+  }
+
+}
+
+@media all and (max-width: 540px){
+
+  #wrap #header .container .gap .wrap .main-menu-wrap #nav .main-menu-list {
+    .even-num .sub-even .sub-gap ul li a {width: 100px;}
+    .odd-num .sub-odd .sub-gap > ul > li {
+      .sub-btn {width: 100px;}
+      .sub-depth2 {
+        left: 100px;
+        .sub-gap ul li a {width: 100px;
+          &.sub-sub-btn {width: 140px;}
+        }
+      }
+    }
+  }
+
+  #wrap #main .container .gap {padding: 18.50784% 3.941146% 0 3.941146%;
+    .wrap {
+      .title-wrap {
+        span {font-size: 2.5vw;
+          i {height: 12px;top: 9px;}
+        }
+        strong {font-size: 2.5vw;}
+        h2 {font-size: 5vw;}
+      }
+      .content-wrap .content-box {width: auto;
+        h3 {font-size: 3.5vw;}
+        .form-wrap { padding: 10%;
+          #login #loginForm li {padding: 15px 0;
+            .input-box {width: auto;
+              input[type="text"]::placeholder, input[type="password"]::placeholder {font-size: 2.3vw;}
+            }
+            &.button-box button {font-size: 2.7vw;}
+          }
+        }
+      }
+    }
+  }
+
+  #wrap #footer .container .gap .wrap {
+    .top {
+      .center .text-box p {font-size: 2.4vw;
+        a {font-size: 2.4vw;}
+      }
+      .right .permit-list {justify-content: flex-end;
+        a {font-size: 2.4vw;}
+      } 
+    }
+    .bottom p {font-size: 2vw;}
+  }
+
+  #wrap #modal .container {height: auto;
+    ul li {
+      h2 {font-size: 14px;}
+      .modal-message {font-size: 12px;}
+      }
+    .button-box {height: 75px;}
+  }
+
+} 
+
+@media all and (max-width: 480px){
+
+  #wrap #header .container .gap .wrap .main-menu-wrap #nav .main-menu-list {
+    .even-num  .sub-even .sub-gap ul li a {width: 70px;font-size: 10px;padding: 10px;
+      &:hover {padding: 10px 10px 10px 15px;}
+      &:focus {padding: 10px 10px 10px 15px;}
+    }
+    .odd-num .sub-odd .sub-gap > ul > li {
+      .sub-btn {width: 70px;font-size: 10px;padding: 10px;
+        &:hover {padding: 10px 10px 10px 15px;}
+        &:focus {padding: 10px 10px 10px 15px;}
+      }
+      .sub-depth2 {
+        left: 70px;
+        .sub-gap ul li a {width: 70px;font-size: 10px;padding: 10px;
+          &.sub-sub-btn {width: 120px;}
+          &:hover {padding: 10px 10px 10px 15px;}
+          &:focus {padding: 10px 10px 10px 15px;}
+        }
+      }
+    }
+  }
+  
+}
+
+@media all and (max-width: 472px){
+
+  #wrap #main .container .gap .wrap .content-wrap .content-box .form-wrap #login #loginForm li .input-box {
+    input[type="text"], input[type="password"] {width: 80%;}
+  }
+
+}
+
+@media all and (max-width: 400px){
+
+  #wrap #modal .container {height: auto;
+    ul {height: auto; padding: 20px 20px 0 20px;
+      li {
+        &:nth-child(1) {height: 40px;}
+        &:nth-child(2) {height: 100px;}
+        }
+    } 
+    .button-box {height: 70px;
+      .ok-btn {height: 40px;line-height: 40px;}
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+

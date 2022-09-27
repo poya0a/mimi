@@ -1,10 +1,8 @@
-깃허브 재포 주소
+깃허브 배포 주소
+https://github.com/poya0a/mimi.git
 
 닷홈 배포 주소
-
-
-
-
+http://dodam5.dothome.co.kr/mimi/
 
 /컨셉 참고 사이트/
  

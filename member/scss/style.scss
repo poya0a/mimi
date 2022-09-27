@@ -1,0 +1,1144 @@
+@import url(./fonts.css);
+@import url(./reset.css);
+
+$container-width: 1750px;
+$section-padding: 100px 3.941146%;
+$background-color: (
+  bg0  : transparent,
+  bg1  : #fff,
+  bg2  : #000,
+  bg3  : #89a8ff,
+  bg4  : #abbdff,
+  bg5  : #555,
+  bg6  : #070080
+);
+$color: (
+  01 : #fff,
+  02 : #000,
+  03 : #89a8ff,
+  04 : #abbdff,
+  05 : #555,
+  06 : #070080
+);
+
+%sec-container{
+  max-width: $container-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#skip {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  li {
+    width: 100%;
+    a {
+      display: block;
+      width: 100%;
+      color: #fff;
+      background: map-get($background-color,bg2);
+      font-size: 0;
+      line-height: 0;
+      outline: 0;
+      text-align: center;
+      &:focus {
+        font-size: 15px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  #header {
+    width: 100%;
+    height: 80px;
+    z-index: 3;
+    position: relative;
+    background: url(../images/header-bg.jpg) no-repeat center/cover fixed;
+    transition: all .2s ease-in-out;
+    .container {
+      @extend %sec-container;
+      height: 100%;
+      .gap {
+        width: 100%;
+        height: 100%;
+        .wrap {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          position: relative;
+          .menu-btn-box {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            .menu-btn {
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              padding: 6px;
+              span {
+                display: block;
+                position: relative;
+                width: 16px;
+                height: 16px;
+                overflow: hidden;
+                i {
+                  position: absolute;
+                  width: 16px;
+                  height: 1px;
+                  background: map-get($background-color,bg1);
+                  left: 0;
+                  transition: all .2s ease-in-out;
+                  &.line1 {top:0;}
+                  &.line2 {top:50%;margin-top:-1px;}
+                  &.line3 {bottom:0;}
+                }
+              }
+              &.on {
+                span {
+                  i {
+                    &.line1 {transform:rotate(135deg);top:50%;margin-top:-0.5px;}
+                    &.line2 {left:-100%;opacity:0;}
+                    &.line3 {transform:rotate(-135deg);bottom:50%;margin-bottom:-0.5px;}
+                  }
+                }
+              }
+            }
+          }
+          .main-menu-wrap {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            display: none;
+            transition: all .3s ease-in-out;
+            #nav {
+              width: auto;
+              height: 100%;
+              background: map-get($background-color,bg0);
+              display: flex;
+              padding: 30px 0;
+              .main-menu-list {
+                display: flex;
+                margin: 0 auto;
+                .even-num {
+                  position: relative;
+                  .main-btn {
+                    padding: 0 20px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    color: map-get($color,01);
+                    font-family:'Nanum Myeongjo';
+                    transition: all .2s ease-in-out;
+                    &:hover,
+                    &:focus,
+                    &.on {color: map-get($color,06);}
+                  }
+                  .sub-even {
+                    position: absolute;
+                    top: 50px;
+                    left: 20px;
+                    background: map-get($background-color,bg1);
+                    box-shadow:-5px 5px 10px 0 rgba(0,0,0, .5);
+                    display: none;
+                    .sub-gap {
+                      ul {
+                        li {
+                          a {
+                            position: relative;
+                            display: inline-block;
+                            width: 160px;
+                            height: 38px;
+                            padding: 10px 20px;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: map-get($color,05);
+                            transition: all .2s ease-in-out;
+                            &:hover {background: map-get($background-color,bg4);color: map-get($color,01);padding: 10px 20px 10px 30px;}
+                            &:focus {background: map-get($background-color,bg4);color: map-get($color,01);padding: 10px 20px 10px 30px;}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .odd-num {
+                  position: relative;
+                  .main-btn {
+                    padding: 0 20px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    color: map-get($color,01);
+                    font-family:'Nanum Myeongjo';
+                    transition: all .2s ease-in-out;
+                    &:hover,
+                    &:focus,
+                    &.on {color:  map-get($color,06);}
+                  }
+                  .sub-odd {
+                    position: absolute;
+                    top: 50px;
+                    left: 20px;
+                    background: map-get($background-color,bg1);
+                    box-shadow:-5px 5px 10px 0 rgba(0,0,0, .5);
+                    display: none;
+                    .sub-gap {
+                      > ul {
+                        > li {
+                          position: relative;
+                          .sub-btn {
+                            display: inline-block;
+                            width: 160px;
+                            height: 38px;
+                            padding: 10px 20px;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: map-get($color,05);
+                            transition: all .2s ease-in-out;
+                            &:hover {background: map-get($background-color,bg4);color: map-get($color,01);padding: 10px 20px 10px 30px;}
+                            &:focus {background: map-get($background-color,bg4);color: map-get($color,01);padding: 10px 20px 10px 30px;}
+                          }
+                          .sub-depth2 {
+                            position: absolute;
+                            top: 0;
+                            left: 160px;
+                            background: map-get($background-color,bg1);
+                            box-shadow: 0 5px 5px 0 rgba(0,0,0, .5);
+                            display: none;
+                            .sub-gap {
+                              ul {
+                                li {
+                                  a {
+                                    display: inline-block;
+                                    width: 160px;
+                                    height: 38px;
+                                    padding: 10px 20px;
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                    color: map-get($color,05);
+                                    transition: all .2s ease-in-out;
+                                    &:hover {background: map-get($background-color,bg4);color: map-get($color,01);padding: 10px 20px 10px 30px;}
+                                    &:focus {background: map-get($background-color,bg4);color: map-get($color,01);padding: 10px 20px 10px 30px;}
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &.on {
+              display: block;
+            }
+          }
+          .logo-box {
+            width: 80px;
+            height: 100%;
+            margin: auto;
+            a {
+              display: inline-block;
+              width: 80px;
+              height: 100%;
+              img {
+                width:100%;
+              }
+            }
+          }
+          #aside {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            .user-box {
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              top: 10px;
+              right: 5.2%;
+              display: none;
+              .user-btn {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                padding: 17px 0 0 0;
+                color: map-get($color,01);
+                transition: all .2s ease-in-out;
+                i {
+                  width: 100%;
+                  height: 100%;
+                  font-size: 23px;}
+                &:hover,
+                &:focus {color: map-get($color,06);}
+              }
+            }
+            .user-menu-list {
+              display: flex;
+              padding: 25px 0 35px 0;
+              li {
+                width: auto;
+                height: 20px;
+                position: relative;
+                a {
+                  font-size: 12px;
+                  line-height: 20px;
+                  color: map-get($color,01);
+                  margin: auto 10px;
+                  transition: all .2s ease-in-out;
+                  &.globe-icon {
+                    i {
+                      width: 20px;
+                      height: 20px;
+                      font-size: 20px;
+                    }
+                  }
+                  &:hover,
+                  &:focus {color: map-get($color,06);}
+                }
+                .bar-icon {
+                  width: 1px;
+                  height: 10px;
+                  position: absolute;
+                  top: 9px;
+                  right: 0;
+                  background: map-get($background-color,bg1);
+                }
+              }
+              &.on {
+                display: inline-block;
+                width: 60px;
+                height: 152px;
+                position: absolute;
+                top: 80px;
+                right: 5.2%;
+                padding: 0;
+                box-shadow:-5px 5px 10px 0 rgba(0,0,0, .5);
+                li {
+                  width: 100%;
+                  height: 38px;
+                  a {
+                    display: inline-block;
+                    width: 60px;
+                    height: 38px;
+                    line-height: 38px;
+                    margin: 0;
+                    text-align: center;
+                    color: map-get($color,05);
+                    background: map-get($background-color,bg1);
+                    &:hover {color: map-get($color,01);background: map-get($background-color,bg3);}
+                    &:focus {color: map-get($color,01);background: map-get($background-color,bg3);}
+                  }
+                  .bar-icon {display: none;}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #main {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    .container {
+      @extend %sec-container;
+      height: 100%;
+      .gap {
+        width: 100%;
+        height: 100%;
+        padding: 100px 0 0 0;
+        .wrap {
+          .title-wrap {
+            padding: 0 0 30px 0;
+            letter-spacing: 1px;
+            color: map-get($color,05);
+            font-family: 'Noto Sans KR';
+            border-bottom: 1px solid #eee;
+            span {
+              width: auto;
+              height: 30px;
+              font-size: 15px;
+              line-height: 30px;
+              display: inline-block;
+              padding: 0 20px 0 0;
+              position: relative;
+              i {
+                width: 1.5px;
+                height: 15px;
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                background: #999;
+              }
+            }
+            strong {
+              width: auto;
+              height: 30px;
+              font-size: 15px;
+              line-height: 30px;
+              font-weight: 700;
+              vertical-align: top;
+              display: inline-block;
+            }
+            h2 {
+              width: 100%;
+              height: 50px;
+              font-size: 30px;
+              font-weight: 700;
+              line-height: 50px;
+              font-family: 'Nanum Myeongjo';
+            }
+          }
+          .content-wrap {
+            padding: 50px 0 100px 0;
+            .cube-wrap {
+              width: 800px;
+              height: 150px;
+              display: flex;
+              margin: 0 auto;
+              .move-box {
+                width: 45%;
+                height: 100%;
+                background: linear-gradient(to right, #fff 95%, transparent);
+                position: relative;
+                transform: translateX(140px);
+                .cube-box {
+                  width: 100px;
+                  height: 100px;
+                  position: relative;
+                  position: absolute;
+                  top: 0;
+                  right: 40px;
+                  transform-style: preserve-3d;
+                  transform: perspective(200px) rotate3d(0,0,0, 0deg) scale3d(1,1,1);
+                  transition: all 3s ease-in-out;
+                  .cube {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border: 2px solid #eee;
+                    border-radius: 3px;
+                    opacity: .5;
+                    &.front  {transform: rotateY(0deg)    translateZ(50px);}
+                    &.back   {transform: rotateY(180deg)  translateZ(50px);}
+                    &.left   {transform: rotateY(-90deg)  translateZ(50px);}
+                    &.right  {transform: rotateY(90deg)   translateZ(50px);}
+                    &.top    {transform: rotateX(90deg)   translateZ(50px);}
+                    &.bottom {transform: rotateX(-90deg)  translateZ(50px);}
+                    img {width: 100%;height: 100%;}
+                  }
+                  &.cube-ani {animation: cubeAni 4s forwards ease-out;}
+                  @keyframes cubeAni {
+                  0%   {transform: perspective(200px) rotate3d(0, 0, 0, 0deg)    scale3d(1,1,1);}
+                  100%  {transform: perspective(200px) rotate3d(0, 1, 0, -720deg) scale3d(0.5,0.5,0.5) translateX(20px);right: 0;}
+                  }
+                }
+                &.cube-ani {animation: cubeBgAni 5s forwards ease-out;}
+                @keyframes cubeBgAni {
+                  0%   {transform: translateX(140px);}
+                  100% {transform: translateX(0);}
+                }
+              }
+              h3 {
+                width: 55%;
+                height: 100%;
+                overflow: hidden;
+                padding: 30px 0 40px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 50px;
+                font-family: 'Nanum Myeongjo';
+                color: map-get($color,03);
+                transition: all .2s ease-in-out;
+              }
+            }
+            .content-box {
+              width: 800px;
+              height: auto;
+              margin: 0 auto;
+              position: relative;
+              .form-wrap {
+                width: 100%;
+                padding: 50px 20px;
+                border: 1px solid #eee;
+                #member {
+                  width: 100%;
+                  #memberForm {
+                    width: 100%;
+                    > li {
+                      width: 100%;
+                      height: auto;
+                      padding: 10px 0;
+                      display: flex;
+                      &.page-sub {
+                        width: 100%;
+                        height: 80px;
+                        display: flex;
+                        padding: 30px 0 20px 0;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid #070080;
+                        h4 {
+                          font-size: 20px;
+                          font-weight: 700;
+                          line-height: 30px;
+                          letter-spacing: -1px;
+                          color: map-get($color, 05);
+                        }
+                        span {
+                          margin: 0 0 0 auto;
+                          font-size: 12px;
+                          line-height: 30px;
+                          letter-spacing: -1px;
+                          color: map-get($color, 05);
+                          i {color: #dc143c;margin-right: 10px;}
+                        }
+                      }
+                      .sub-title {
+                        width: 20%;
+                        height: 65px;
+                        display: inline-block;
+                        padding: 19px 0;
+                        label {
+                          width: 100%;
+                          display: inline-block;
+                          padding: 0 0 0 20px;
+                          span {
+                            height: 25px;
+                            display: inline-block;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            letter-spacing: -1px;
+                            color: map-get($color, 05);
+                            .enter {display: none;}
+                          }
+                          i {color: #dc143c;margin-left: 10px;}
+                        }
+                        &.sub-title-5th {padding: 10px 0;
+                          label {
+                            span {height: 45px;}
+                            i {display: inline-block;height: 21px;margin: auto auto -20px -10px;}
+                          }
+                        }
+                      }
+                      .input-box {
+                        width: 80%;
+                        height: auto;
+                        position: relative;
+                        padding: 10px 0;
+                        input {
+                          width: 70%;
+                          height: 45px;
+                          border: 1px solid #eee;
+                          border-radius: 3px;
+                          padding: 0 20px;
+                          &:focus {outline: none;}
+                          &#inputAddress1 {width: 33.7%;margin-right: 10px;}
+                          &#inputAddress2 {width: 33.7%;}
+                          &#inputAddress3 {margin-top: 10px;}
+                        }
+                        button {
+                          width: 120px;
+                          height: 45px;
+                          position: absolute;
+                          top: 10px;
+                          right: 20px;
+                          font-size: 14px;
+                          font-weight: 600;
+                          letter-spacing: -1px;
+                          color: map-get($color, 01);
+                          background: map-get($background-color, bg3);
+                          border: 1px solid #89a8ff;
+                          border-radius: 3px;
+                          transition: all .2s ease-in-out;
+                          &:hover,&:focus,&.on {background: map-get($background-color, bg1);color: map-get($color, 03);}
+                        }
+                        .guide-text {
+                          width: 100%;
+                          padding: 10px 0 0 0;
+                          display: none;
+                          p {
+                            font-size: 12px;
+                            line-height: 150%;
+                            letter-spacing: -1px;
+                            color: map-get($color, 05);
+                            &::before {
+                              content: '\2022';
+                              display: inline-block;
+                              margin-right: 10px;
+                              font-size: 12px;
+                            }
+                            &.success {color: map-get($color, 04);
+                              &::before {
+                                content: '\2714';
+                                color: map-get($color, 04);
+                                margin: 0 5px 0 0;
+                                font-size: 12px;
+                              }
+                            }
+                            &.error {color: #dc143c;
+                              &::before {
+                                content: '\2715';
+                                color: #dc143c;
+                                margin: 0 5px 0 0;
+                                font-size: 12px;
+                              }
+                            }
+                          }
+                        }
+                        &.receive {
+                          display: flex;
+                          label {
+                            width: 100px;
+                            display: flex;
+                            input {
+                              appearance:none;
+                              width:20px;
+                              height:20px;
+                              border-radius:50%;
+                              border:1px solid #eee;
+                              margin: auto 10px auto 0;
+                              padding: 0;
+                              &:checked {border:5px solid #89a8ff}
+                            }
+                            span {
+                              font-size:14px;
+                              line-height:45px;
+                              letter-spacing:-1px;
+                              color:map-get($color, 05);
+                            }
+                          }
+                        }
+                        .code-num {
+                          position: relative;
+                          display: none;
+                          &.on {display: block;}
+                          .code-box {
+                            width: 70%;
+                            height: 45px;
+                            border: 1px solid #eee;
+                            border-radius: 3px;
+                            margin-top: 10px;
+                            display: flex;
+                            &.off {background: rgba(239, 239, 239, 1);}
+                            input {height: 43px;border: none;}
+                            .countdown {
+                              width: 25px;
+                              height: 20px;
+                              margin: auto 20px auto auto;
+                              font-size: 14px;
+                              font-weight: 400;
+                              line-height: 20px;
+                              letter-spacing: -0.5px;
+                              color: #dc143c;
+                            }
+                          }
+                          .code-confirm-btn {top: 0;}
+                          .receive-info {
+                            width: 70%;
+                            margin-top: 10px;
+                            font-size: 12px;
+                            line-height: 150%;
+                            letter-spacing: -1px;
+                            color:map-get($color, 05);
+                          }
+                        }
+                        .date-box {
+                          width: 70%;
+                          height: 45px;
+                          border: 1px solid #eee;
+                          border-radius: 3px;
+                          ul {display: flex;
+                            li {width:30%; height:100%;
+                              &:nth-child(2),&:nth-child(4) {width:5%;height:100%;}
+                              input {
+                                width: 100%;
+                                height: 43px;
+                                border: none;
+                                text-align: center;
+                              }
+                              span {
+                                width: 100%;
+                                height: 43px;
+                                display: inline-block;
+                                text-align: center;
+                                font-size:14px;
+                                line-height: 40px;
+                                color:#ddd;
+                              }
+                            }
+                          }
+                        }
+                        .guide-birthday {
+                          width: 100%;
+                          p {
+                            padding: 10px 0 0 0;
+                            font-size: 12px;
+                            line-height: 150%;
+                            letter-spacing: -1px;
+                            color: #dc143c;
+                            display: none;
+                            &::before {
+                              content: '\2715';
+                              color: #dc143c;
+                              margin: 0 5px 0 0;
+                              font-size: 12px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .border-wrap {
+                width: 100%;
+                #borderBox {
+                  .border {
+                    width: 100%;
+                    .border-title {
+                      width: 100%;
+                      height: 100px;
+                      padding: 50px 0 20px 0;
+                      h4 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        letter-spacing: -1px;
+                        color: map-get($color, 05);
+                      }
+                    }
+                    .scroll-box {
+                      width: 100%;
+                      height: 300px;
+                      padding: 0 20px 30px 20px;
+                      border: 1px solid #eee;
+                      overflow-y:scroll;
+                      .border-text {
+                        font-family: 'Noto Sans KR';
+                        margin-top: 30px;
+                        .tit {
+                          font-size: 14px;
+                          line-height: 30px;
+                        }
+                        .txt {
+                          font-size: 12px;
+                          line-height: 20px;
+                          color: #888;
+                        }
+                      }
+                      table {
+                        width: 100%;
+                        border: 1px solid #ccc;
+                        font-family: 'Noto Sans KR';
+                        margin-top: 30px;
+                        border-collapse: collapse;
+                        letter-spacing: -1px;
+                        thead {
+                          width: 100%;
+                          height: 40px;
+                          tr {width: 100%;
+                            border: 1px solid #ccc;
+                            th {
+                              border: 1px solid #ccc;
+                              font-size: 15px;
+                              background: #eee;
+                              text-align: center;
+                              &:nth-child(1) {width: 20%;}
+                              &:nth-child(2) {width: 55%;}
+                              &:nth-child(3) {width: 25%;}
+                            }
+                          }
+                        }
+                        tbody {
+                          tr {
+                            border: 1px solid #ccc;
+                            td {
+                              padding: 5px;
+                              border: 1px solid #ccc;
+                              font-size: 12px;
+                              line-height: 20px;
+                              color: #888;
+                              &:first-child {
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 30px;
+                                color: #666;
+                                text-align: center;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      > .txt {
+                        font-family: 'Noto Sans KR';
+                        margin-top: 30px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: #888;
+                      }
+                    }
+                    .agree-box {
+                      width: 100%;
+                      height: 50px;
+                      display: flex;
+                      border-bottom: 1px solid #eee;
+                      span {
+                        font-size: 14px;
+                        line-height: 50px;
+                        padding: 0 0 0 20px;
+                      }
+                      .btn-box {
+                        margin: 0 0 0 auto;
+                        display: flex;
+                        label {
+                          width: 100px;
+                          input {
+                            appearance:none;
+                            width:20px;
+                            height:20px;
+                            border-radius:50%;
+                            border:1px solid #eee;
+                            margin: auto 10px auto 0;
+                            padding: 0;
+                            &:checked {border:5px solid #89a8ff}
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .all-agree {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    label {
+                      margin: 0 10px 0 auto;
+                      input {
+                        appearance:none;
+                        width:20px;
+                        height:20px;
+                        border-radius:50%;
+                        border:1px solid #eee;
+                        margin: auto 10px auto 0;
+                        padding: 0;
+                        &:checked {border:5px solid #89a8ff}
+                      }
+                      span {
+                        font-size: 14px;
+                        line-height: 50px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .submit-wrap {
+              width: 100%;
+              height: 100px;
+              text-align: center;
+              padding: 55px 0 0 0;
+              .submit-btn {
+                width: 150px;
+                height: 45px;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: -1px;
+                color: map-get($color, 01);
+                background: map-get($background-color, bg3);
+                border: 1px solid #89a8ff;
+                border-radius: 3px;
+                transition: all .2s ease-in-out;
+                &:hover,&:focus {background: map-get($background-color, bg1);color: map-get($color, 03);}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #footer {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 345px;
+    background: url(../images/footer_bg.jpg) no-repeat center/cover fixed;
+    user-select: none;
+    .container {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#fff 1%, transparent);
+      .gap {
+        @extend %sec-container;
+        height: 100%;
+        .wrap {
+          width: 100%;
+          height: 100%;
+          padding: 100px 0 0 0;
+          .top {
+            width: 100%;
+            height: 105px;
+            margin-bottom: 100px;
+            display: flex;
+            .left {
+              width: 100px;
+              height: 100px;
+              margin-right: 50px;
+              .logo-wrap {
+                width: 100%;
+                height: 100%;
+                .logo-gap {
+                  width: 100%;
+                  img {width: 100%;}
+                }
+              }
+            }
+            .center {
+              .text-box {
+                width: auto;
+                display: inline-block;
+                p {
+                  width: auto;
+                  height: auto;
+                  font-size: 13px;
+                  letter-spacing: -1px;
+                  line-height: 20px;
+                  color: map-get($color,01);
+                  span {
+                    vertical-align: top;
+                    padding: 0 15px 0 0;
+                    position: relative;
+                    i {
+                      content:'';
+                      display: inline-block;
+                      width: 1px;
+                      height: 10px;
+                      position: absolute;
+                      top: 4px;
+                      right: 6px;
+                      background: map-get($background-color,bg1);
+                    }
+                  }
+                  &:nth-child(3) {
+                    i {width: 20px;height: 20px;position: relative;padding: 0 0 0 2px;
+                      &::before {font-size: 16px;}
+                    }
+                  }
+                  &:nth-child(4) {
+                    i {width: 20px;height: 20px;position: relative;padding: 0 0 0 1px;
+                      &::before {font-size: 15px;}
+                    }
+                  }
+                  &:nth-child(5) {
+                    i {width: 20px;height: 20px;position: relative;
+                      &::before {font-size: 13px;}
+                    }
+                  }
+                  a {
+                    font-size: 13px;
+                    letter-spacing: -1px;
+                    line-height: 20px;
+                    vertical-align: top;
+                    color: map-get($color,01);
+                  }
+                }
+              }
+            }
+            .right {
+              width: 200px;
+              height: 80px;
+              margin: 0 0 auto auto;
+              .permit-list {
+                display: flex;
+                margin-bottom: 10px;
+                a {
+                  display: inline-block;
+                  font-size: 13px;
+                  line-height: 20px;
+                  color: map-get($color,01);
+                  margin-left: 20px;
+                  transition: all .2s ease-in-out;
+                  &:hover {opacity: 0.3;}
+                }
+              }
+              .sns-list {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                padding: 10px 0;
+                .sns-item {
+                  margin: 0 5px;
+                  a {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    padding: 5px 0 5px 10px;
+                    img {
+                      width: 20px;
+                      height: auto;
+                      transition: all .2s ease-in-out;
+                    }
+                    &:hover {
+                      img {opacity: 0.3;}
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .bottom {
+            width: 100%;
+            height: 40px;
+            margin: auto auto 0 auto;
+            cursor: default;
+            text-align: center;
+            p {
+              display: inline;
+              width: auto;
+              height: 40px;
+              padding: 0 10px 0 0;
+              font-size: 11px;
+              line-height: 20px;
+              color: map-get($color,01);
+              position: relative;
+              i {
+                content:'';
+                display: inline-block;
+                width: 1px;
+                height: 10px;
+                position: absolute;
+                top: 3px;
+                right: 0;
+                background: map-get($background-color,bg1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #goTopBox {
+    z-index: 4;
+    position: fixed;
+    bottom: 75px;
+    right: 50px;
+    width: 40px;
+    height:40px;
+    display: none;
+    .top-btn {
+      width: 100%;
+      height: 100%;
+      background: map-get($background-color,bg1);
+      border-radius: 50%;
+      display: inline-block;
+      transition: all .2s ease-in-out;
+      i {
+        display: inline-block;
+        margin: -5px auto auto auto;
+        font-size: 35px;
+        color: map-get($color,03);
+        transition: all .2s ease-in-out;
+      }
+      &:hover {
+        background: map-get($background-color,bg0);
+        i {color: map-get($color,01);}
+      }
+    }
+  }
+  #modal {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .3);
+    display: none;
+    &.show {display: flex;}
+    .container {
+      width: 500px;
+      height: 300px;
+      margin: auto;
+      background: #fff;
+      ul {
+        width: 100%;
+        height: 200px;
+        padding: 25px;
+        li {display: flex;
+          &:nth-child(1) {height: 50px;border-bottom: 1px solid #eee;}
+          &:nth-child(2) {height: 125px;}
+          h2 {
+            margin: auto auto auto 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: map-get($color,03);
+          }
+          .colse-btn {
+            width: 30px;
+            height: 30px;
+            margin: auto 0 auto auto;
+            border: 1px solid #eee;
+            span {
+              width: 100%;
+              height: 100%;
+              display: inline-block;
+              position: relative;
+              .line {
+                position: absolute;
+                width: 20px;
+                height: 1px;
+                background: map-get($background-color,bg5);
+                right: 3.5px;
+                &:nth-child(1) {transform:rotate(135deg);top:50%;margin-top:-0.5px;}
+                &:nth-child(2) {transform:rotate(-135deg);bottom:50%;margin-bottom:-0.5px;}
+              }
+            }
+          }
+          .modal-message {
+            margin: auto;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+          }
+        }
+      }
+      .button-box {
+        width: 100%;
+        height: 100px;
+        background: rgba(137,168,255, .1);
+        display: flex;
+        .ok-btn {
+          width: 120px;
+          height: 45px;
+          margin: auto;
+          background: map-get($background-color,bg3);
+          color: map-get($color,01);
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 45px;
+          border: 1px solid #89a8ff;
+          border-radius: 3px;
+          transition: all .2s ease-in-out;
+          &:hover,&:focus {background: map-get($background-color,bg1);color: map-get($color,03);}
+        }
+      }
+    }
+  }
+}

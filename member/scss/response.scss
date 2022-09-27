@@ -1,0 +1,345 @@
+@media all and (max-width: 1770px){
+
+  #wrap {
+    #header .container .gap {padding: 0 3.941146%;}
+    #main .container .gap {padding: 100px 3.941146% 0 3.941146%;}
+    #footer .container .gap .wrap {padding: 100px 3.941146% 0 3.941146%;}
+  }
+
+}
+
+@media all and (max-width: 1170px){
+
+  #wrap #goTopBox {bottom: 20px; right: 20px;}
+
+}
+
+@media all and (max-width: 980px){
+
+  #wrap #goTopBox {
+    width: 28px;
+    height: 28px;
+    .top-btn i {font-size: 28px;}
+  }
+
+}
+
+@media all and (max-width: 900px){
+
+  #wrap #header {
+    height: 160px;
+    .container .gap .wrap {
+      .menu-btn-box {top: 105px;}
+      .main-menu-wrap {top: 80px;
+        #nav {height: 80px;}
+      }
+      .logo-box {margin: 0 auto auto auto;}
+      #aside {
+        top: 80px;
+        .user-box {display: block;}
+        .user-menu-list {display: none;}
+      }
+    }
+  }
+
+  #wrap #footer .container .gap .wrap {
+    padding: 0 3.941146%;
+    .top {
+      display: block;
+      height: 305px;
+      margin: 0;
+    }
+  }
+
+}
+
+@media all and (max-width: 868px){
+
+  #wrap #main .container .gap .wrap .content-wrap {
+    .cube-wrap {width: auto;}
+    .content-box {width: auto;}
+  }
+
+}
+
+@media all and (max-width: 840px){
+
+  #wrap #header .container .gap .wrap .main-menu-wrap #nav {
+    .main-menu-list .main-menu {
+      .main-btn {padding: 0 10px;}
+      .sub {left: 10px;}
+    }
+  }
+}
+
+@media all and (max-width: 750px){
+
+  #wrap #main .container .gap .wrap .content-wrap .content-box .form-wrap #member #memberForm > li .input-box {
+    input {
+      &#inputAddress1, &#inputAddress2 {width: 33.5%;}
+    }
+    button {width: 100px;font-size: 13px;}
+  } 
+
+}
+
+@media all and (max-width: 700px){
+
+  #wrap #main .container .gap .wrap .content-wrap .content-box .form-wrap #member #memberForm > li {
+    .sub-title label {padding: 0;
+      i {margin-left: 8px;}
+    }
+    .input-box button {right: 0;}
+  } 
+
+}
+
+@media all and (max-width: 600px){
+
+  #wrap #main .container .gap .wrap .content-wrap {
+    .cube-wrap {
+      .move-box {width: 40%;}
+      h3 {width: 60%;}
+    }
+    .content-box .form-wrap #member #memberForm > li {
+      .sub-title {width: 23%;
+        label span {font-size: 2.3vw;}
+      }
+      .input-box {width: 77%;
+        input {
+          &#inputAddress1 {width: 33%; margin-right: 8px;}
+          &#inputAddress2 {width: 33%;}
+          &::placeholder {font-size: 2.3vw; letter-spacing: -1px;}
+        }
+        button {font-size: 2.3vw;}
+      } 
+    }
+    .submit-wrap .submit-btn {font-size: 12px;}
+  }
+  
+  #wrap #modal {padding: 0 10%;
+    .container {width: 100%;
+      .button-box .ok-btn {font-size: 12px;}
+    }
+  } 
+
+}
+
+@media all and (max-width: 540px){
+
+  #wrap #header .container .gap .wrap .main-menu-wrap #nav .main-menu-list {
+    .even-num .sub-even .sub-gap ul li a {width: 100px;}
+    .odd-num .sub-odd .sub-gap > ul > li {
+      .sub-btn {width: 100px;}
+      .sub-depth2 {
+        left: 100px;
+        .sub-gap ul li a {width: 100px;
+          &.sub-sub-btn {width: 140px;}
+        }
+      }
+    }
+  }
+
+  #wrap #main .container .gap {padding: 18.50784% 3.941146% 0 3.941146%;
+    .wrap {
+      .title-wrap {
+        span {font-size: 2.3vw;
+          i {height: 12px;top: 9px;}
+        }
+        strong {font-size: 2.5vw;}
+        h2 {font-size: 5vw;}
+      }
+      .content-wrap {
+        .cube-wrap h3 {font-size: 3.5vw;}
+        .content-box {
+          .form-wrap {padding: 10% 4%;
+            #member #memberForm > li {
+              &.page-sub {height: 60px;padding: 20px 0 10px 0;
+                h4 {font-size: 3.5vw;}
+                span {font-size: 10px;}
+              }
+              .sub-title {width: 20%;}
+              .input-box {width: 80%;
+                input {font-size: 12px;}
+                button {width: 90px;}
+                .guide-text p {font-size: 10px;
+                  &::before, &.success::before, &.error::before {font-size: 10px;}
+                }
+                &.receive label span {font-size: 2.5vw;}
+                .code-num {
+                  .code-box .countdown {margin: auto 10px auto auto;font-size: 10px;}
+                  .receive-info {font-size: 10px;}
+                } 
+                .guide-birthday p {font-size: 10px;
+                  &::before {font-size: 10px;}
+                }
+              }
+            }
+          }
+          .border-wrap #borderBox {
+            .border {
+              .border-title {padding: 10% 0 4% 0;
+                h4 {font-size: 3.5vw;}
+              }
+              .scroll-box {padding: 0 10px 15px 10px;
+                .border-text {margin-top: 15px;
+                  .tit {font-size: 12px;}
+                  .txt {font-size: 10px;}
+                }
+                table {margin-top: 15px;
+                  thead tr th {font-size: 13px;}
+                  tbody tr td {font-size: 10px;
+                    &:first-child {font-size: 12px;}
+                  }
+                }
+                > .txt {font-size: 10px;margin-top: 15px;}
+              }
+              .agree-box {
+                span {font-size: 12px;padding: 0 0 0 10px;}
+                .btn-box {font-size: 10px;
+                  label {width: 80px;
+                    input {margin: 0;}
+                  }
+                }
+              }
+            }
+            .all-agree label span {font-size: 12px;}
+          } 
+        } 
+      } 
+    }
+  }  
+
+  #wrap #footer .container .gap .wrap {
+    .top {
+      .center .text-box p {font-size: 2.4vw;
+        a {font-size: 2.4vw;}
+      }
+      .right .permit-list {justify-content: flex-end;
+        a {font-size: 2.4vw;}
+      } 
+    }
+    .bottom p {font-size: 2vw;}
+  }
+
+  #wrap #modal .container {height: auto;
+    ul li {
+      h2 {font-size: 14px;}
+      .modal-message {font-size: 12px;}
+      }
+    .button-box {height: 75px;}
+  }
+
+}
+
+@media all and (max-width: 480px){
+
+  #wrap #header .container .gap .wrap .main-menu-wrap #nav .main-menu-list {
+    .even-num  .sub-even .sub-gap ul li a {width: 70px;font-size: 10px;padding: 10px;
+      &:hover {padding: 10px 10px 10px 15px;}
+      &:focus {padding: 10px 10px 10px 15px;}
+    }
+    .odd-num .sub-odd .sub-gap > ul > li {
+      .sub-btn {width: 70px;font-size: 10px;padding: 10px;
+        &:hover {padding: 10px 10px 10px 15px;}
+        &:focus {padding: 10px 10px 10px 15px;}
+      }
+      .sub-depth2 {
+        left: 70px;
+        .sub-gap ul li a {width: 70px;font-size: 10px;padding: 10px;
+          &.sub-sub-btn {width: 120px;}
+          &:hover {padding: 10px 10px 10px 15px;}
+          &:focus {padding: 10px 10px 10px 15px;}
+        }
+      }
+    }
+  }
+
+  #wrap #main .container .gap .wrap .content-wrap .content-box .form-wrap #member #memberForm > li {
+    .sub-title-4th {padding: 10px 0;
+      label {
+        position: relative;
+        span {height: auto;
+          .enter {display: block;}
+        } 
+        i {margin: 0;position: absolute;bottom: -3px;left: 26px;}
+      } 
+    }
+    .input-box {
+      input {
+        &#inputAddress1 {width: 33%; margin-right: 6px;}
+        &#inputAddress2 {width: 33%;}
+      }
+      button {width: 80px;}
+    } 
+  } 
+  
+}
+
+@media all and (max-width: 430px){
+
+  #wrap #main .container .gap .wrap .content-wrap {
+    .cube-wrap {
+      .move-box {width: 38%;}
+      h3 {width: 62%;}
+    }
+    .content-box .form-wrap #member #memberForm > li .input-box {
+      input {padding: 0 0 0 10px;}
+      button {width: 70px;}
+      .date-box ul li input {padding: 0;}
+    }
+  } 
+
+}
+
+@media all and (max-width: 400px){
+
+  #wrap #main .container .gap .wrap .content-wrap .content-box .form-wrap #member #memberForm > li {padding: 0;
+    .sub-title {height: 60px;padding: 17px 0;
+                  &.sub-title-4th {padding: 10px 0;
+                    label span {height: 40px;}
+                  }
+                  &.sub-title-5th {padding: 10px 0;
+                    label {
+                      span {height: 40px;}
+                      i {margin: auto auto -25px -5px;}
+                    }
+                  }
+    }
+    .input-box {
+      input {height: 40px;
+        &#inputAddress1 {width: 34%;margin: 0;}
+        &#inputAddress2 {width: 34%;}
+        &#inputAddress3 {margin-top: 5px;}
+      }
+      button {height: 40px;width: 65px;}
+      &.receive label {width: 80px;height: 40px;}
+      .code-num .code-box {
+        height: 40px;
+        margin-top: 5px;
+        input {height: 38px;}
+        .countdown {margin: auto 7px auto auto;}
+      }
+      .date-box {height: 40px;
+        ul li {
+          input {height: 38px;}
+          span {height: 38px;}
+        }
+      }
+    }
+  }
+
+  #wrap #modal .container {height: auto;
+    ul {height: auto; padding: 20px 20px 0 20px;
+      li {
+        &:nth-child(1) {height: 40px;}
+        &:nth-child(2) {height: 100px;}
+        }
+    } 
+    .button-box {height: 70px;
+      .ok-btn {height: 40px;line-height: 40px;}
+    }
+  }
+         
+
+}
